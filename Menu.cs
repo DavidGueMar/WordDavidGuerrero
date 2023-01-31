@@ -58,6 +58,7 @@ namespace WordDavidGuerrero
             miArchivo.Flush();
 
             MessageBox.Show(texto);
+            //TODO conseguir que se guarde lo escrito en el ritchtextBox en la puta variable texto
         }
 
 
