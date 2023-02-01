@@ -38,12 +38,9 @@ namespace WordDavidGuerrero
 
         private void guardarcomoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            /*   Form hijoActivo = this.ActiveMdiChild;
-               Documento formActivo = (Documento)ActiveMdiChild;
-               String texto = formActivo.rtbDocumento.Text;
-            */
-            Documento doc = new Documento();
-            String texto = doc.getRtbDocumento();
+            //instancia necesaria para acceder a la propiedad text del rtb del documento con el focus
+            Documento formActivo = (Documento)ActiveMdiChild;
+
 
             SaveFileDialog archivo = new SaveFileDialog();
             StreamWriter miArchivo = null;
@@ -54,11 +51,11 @@ namespace WordDavidGuerrero
 
             String ruta = archivo.FileName;
             miArchivo = File.AppendText(ruta);
-            miArchivo.Write(texto);
+            miArchivo.Write(formActivo.getRtbDocumento());
             miArchivo.Flush();
 
-            MessageBox.Show(texto);
-            //TODO conseguir que se guarde lo escrito en el ritchtextBox en la puta variable texto
+            MessageBox.Show(formActivo.getRtbDocumento());
+
         }
 
 
