@@ -34,9 +34,21 @@ namespace WordDavidGuerrero
         private void abrirToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+
+            Documento doc = new Documento();
+            doc.MdiParent = this;
+            doc.Text = doc.abrir();
+            //doc.abrir();
+            doc.Show();
+
+
+
+
         }
 
-        private void guardarcomoToolStripMenuItem_Click(object sender, EventArgs e)
+
+
+        private void guardarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //instancia necesaria para acceder a la propiedad text del rtb del documento con el focus
             Documento formActivo = (Documento)ActiveMdiChild;
@@ -54,10 +66,18 @@ namespace WordDavidGuerrero
             miArchivo.Write(formActivo.getRtbDocumento());
             miArchivo.Flush();
 
-            MessageBox.Show(formActivo.getRtbDocumento());
 
+
+            MessageBox.Show(formActivo.getRtbDocumento());
         }
 
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Desea cerrar el formulario", "Salir del la aplicacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Close();
+            }
 
+        }
     }
 }
