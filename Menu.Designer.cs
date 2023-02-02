@@ -47,10 +47,12 @@ namespace WordDavidGuerrero
             this.pegarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.seleccionartodoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.borrarTodoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.formatoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.colorTextoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.colorFondoTextoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.colorFondoFormularioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.formatoTextoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ventanaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cascadaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verticalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -92,7 +94,7 @@ namespace WordDavidGuerrero
             this.nuevoToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
             this.nuevoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.nuevoToolStripMenuItem.Text = "&Nuevo";
             this.nuevoToolStripMenuItem.Click += new System.EventHandler(this.nuevoToolStripMenuItem_Click);
             // 
@@ -102,14 +104,14 @@ namespace WordDavidGuerrero
             this.abrirToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.abrirToolStripMenuItem.Name = "abrirToolStripMenuItem";
             this.abrirToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.abrirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.abrirToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.abrirToolStripMenuItem.Text = "&Abrir";
             this.abrirToolStripMenuItem.Click += new System.EventHandler(this.abrirToolStripMenuItem_Click);
             // 
             // toolStripSeparator
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator.Size = new System.Drawing.Size(153, 6);
             // 
             // guardarToolStripMenuItem
             // 
@@ -117,19 +119,19 @@ namespace WordDavidGuerrero
             this.guardarToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
             this.guardarToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.guardarToolStripMenuItem.Text = "&Guardar";
             this.guardarToolStripMenuItem.Click += new System.EventHandler(this.guardarToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(153, 6);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.salirToolStripMenuItem.Text = "&Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -143,7 +145,8 @@ namespace WordDavidGuerrero
             this.copiarToolStripMenuItem,
             this.pegarToolStripMenuItem,
             this.toolStripSeparator4,
-            this.seleccionartodoToolStripMenuItem});
+            this.seleccionartodoToolStripMenuItem,
+            this.borrarTodoToolStripMenuItem});
             this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
             this.editarToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
             this.editarToolStripMenuItem.Text = "&Editar";
@@ -154,6 +157,7 @@ namespace WordDavidGuerrero
             this.deshacerToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z)));
             this.deshacerToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.deshacerToolStripMenuItem.Text = "&Deshacer";
+            this.deshacerToolStripMenuItem.Click += new System.EventHandler(this.deshacerToolStripMenuItem_Click);
             // 
             // rehacerToolStripMenuItem
             // 
@@ -161,6 +165,7 @@ namespace WordDavidGuerrero
             this.rehacerToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Y)));
             this.rehacerToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.rehacerToolStripMenuItem.Text = "&Rehacer";
+            this.rehacerToolStripMenuItem.Click += new System.EventHandler(this.rehacerToolStripMenuItem_Click);
             // 
             // toolStripSeparator3
             // 
@@ -175,6 +180,7 @@ namespace WordDavidGuerrero
             this.cortarToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
             this.cortarToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.cortarToolStripMenuItem.Text = "Cor&tar";
+            this.cortarToolStripMenuItem.Click += new System.EventHandler(this.cortarToolStripMenuItem_Click);
             // 
             // copiarToolStripMenuItem
             // 
@@ -184,6 +190,7 @@ namespace WordDavidGuerrero
             this.copiarToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
             this.copiarToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.copiarToolStripMenuItem.Text = "&Copiar";
+            this.copiarToolStripMenuItem.Click += new System.EventHandler(this.copiarToolStripMenuItem_Click);
             // 
             // pegarToolStripMenuItem
             // 
@@ -193,6 +200,7 @@ namespace WordDavidGuerrero
             this.pegarToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
             this.pegarToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.pegarToolStripMenuItem.Text = "&Pegar";
+            this.pegarToolStripMenuItem.Click += new System.EventHandler(this.pegarToolStripMenuItem_Click);
             // 
             // toolStripSeparator4
             // 
@@ -204,13 +212,22 @@ namespace WordDavidGuerrero
             this.seleccionartodoToolStripMenuItem.Name = "seleccionartodoToolStripMenuItem";
             this.seleccionartodoToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.seleccionartodoToolStripMenuItem.Text = "&Seleccionar todo";
+            this.seleccionartodoToolStripMenuItem.Click += new System.EventHandler(this.seleccionartodoToolStripMenuItem_Click);
+            // 
+            // borrarTodoToolStripMenuItem
+            // 
+            this.borrarTodoToolStripMenuItem.Name = "borrarTodoToolStripMenuItem";
+            this.borrarTodoToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.borrarTodoToolStripMenuItem.Text = "Borrar todo";
+            this.borrarTodoToolStripMenuItem.Click += new System.EventHandler(this.borrarTodoToolStripMenuItem_Click);
             // 
             // formatoToolStripMenuItem
             // 
             this.formatoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.colorTextoToolStripMenuItem,
             this.colorFondoTextoToolStripMenuItem,
-            this.colorFondoFormularioToolStripMenuItem});
+            this.colorFondoFormularioToolStripMenuItem,
+            this.formatoTextoToolStripMenuItem});
             this.formatoToolStripMenuItem.Name = "formatoToolStripMenuItem";
             this.formatoToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
             this.formatoToolStripMenuItem.Text = "Formato";
@@ -220,18 +237,28 @@ namespace WordDavidGuerrero
             this.colorTextoToolStripMenuItem.Name = "colorTextoToolStripMenuItem";
             this.colorTextoToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.colorTextoToolStripMenuItem.Text = "Color texto";
+            this.colorTextoToolStripMenuItem.Click += new System.EventHandler(this.colorTextoToolStripMenuItem_Click);
             // 
             // colorFondoTextoToolStripMenuItem
             // 
             this.colorFondoTextoToolStripMenuItem.Name = "colorFondoTextoToolStripMenuItem";
             this.colorFondoTextoToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.colorFondoTextoToolStripMenuItem.Text = "Color fondo texto";
+            this.colorFondoTextoToolStripMenuItem.Click += new System.EventHandler(this.colorFondoTextoToolStripMenuItem_Click);
             // 
             // colorFondoFormularioToolStripMenuItem
             // 
             this.colorFondoFormularioToolStripMenuItem.Name = "colorFondoFormularioToolStripMenuItem";
             this.colorFondoFormularioToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.colorFondoFormularioToolStripMenuItem.Text = "Color fondo formulario";
+            this.colorFondoFormularioToolStripMenuItem.Click += new System.EventHandler(this.colorFondoFormularioToolStripMenuItem_Click);
+            // 
+            // formatoTextoToolStripMenuItem
+            // 
+            this.formatoTextoToolStripMenuItem.Name = "formatoTextoToolStripMenuItem";
+            this.formatoTextoToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.formatoTextoToolStripMenuItem.Text = "Formato texto";
+            this.formatoTextoToolStripMenuItem.Click += new System.EventHandler(this.formatoTextoToolStripMenuItem_Click);
             // 
             // ventanaToolStripMenuItem
             // 
@@ -249,24 +276,28 @@ namespace WordDavidGuerrero
             this.cascadaToolStripMenuItem.Name = "cascadaToolStripMenuItem";
             this.cascadaToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
             this.cascadaToolStripMenuItem.Text = "Cascada";
+            this.cascadaToolStripMenuItem.Click += new System.EventHandler(this.cascadaToolStripMenuItem_Click);
             // 
             // verticalToolStripMenuItem
             // 
             this.verticalToolStripMenuItem.Name = "verticalToolStripMenuItem";
             this.verticalToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
             this.verticalToolStripMenuItem.Text = "Vertical";
+            this.verticalToolStripMenuItem.Click += new System.EventHandler(this.verticalToolStripMenuItem_Click);
             // 
             // horizontalToolStripMenuItem
             // 
             this.horizontalToolStripMenuItem.Name = "horizontalToolStripMenuItem";
             this.horizontalToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
             this.horizontalToolStripMenuItem.Text = "Horizontal";
+            this.horizontalToolStripMenuItem.Click += new System.EventHandler(this.horizontalToolStripMenuItem_Click);
             // 
             // listaDeDocumentosAbiertosToolStripMenuItem
             // 
             this.listaDeDocumentosAbiertosToolStripMenuItem.Name = "listaDeDocumentosAbiertosToolStripMenuItem";
             this.listaDeDocumentosAbiertosToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
             this.listaDeDocumentosAbiertosToolStripMenuItem.Text = " Lista de documentos abiertos";
+            this.listaDeDocumentosAbiertosToolStripMenuItem.Click += new System.EventHandler(this.listaDeDocumentosAbiertosToolStripMenuItem_Click);
             // 
             // Menu
             // 
@@ -314,6 +345,8 @@ namespace WordDavidGuerrero
         private System.Windows.Forms.ToolStripMenuItem horizontalToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listaDeDocumentosAbiertosToolStripMenuItem;
         private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.ToolStripMenuItem formatoTextoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem borrarTodoToolStripMenuItem;
     }
 }
 

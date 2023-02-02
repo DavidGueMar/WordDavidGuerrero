@@ -13,11 +13,16 @@ namespace WordDavidGuerrero
 {
     public partial class Documento : Form
     {
+       
         public Documento()
         {
             InitializeComponent();
         }
-
+        public Documento(RichTextBox richTextBoxDoc)
+        {
+            this.rtbDocumento = richTextBoxDoc;
+        }
+        
       public string getRtbDocumento()
         {
             String texto = rtbDocumento.Text.ToString();
@@ -61,5 +66,82 @@ namespace WordDavidGuerrero
         {
             Close();
         }
+
+        public void rehacer()
+        {
+            rtbDocumento.Redo();
+        }
+        public void deshacer()
+        {
+            rtbDocumento.Undo();
+        }
+      
+
+        public void copiar()
+        {
+            rtbDocumento.Copy();
+        }
+
+        public void cortar()
+        {
+            rtbDocumento.Cut();
+        }
+
+        public void seleccionarTodo()
+        {
+            rtbDocumento.SelectAll();
+        }
+
+        public void borrarTodo()
+        {
+            rtbDocumento.Clear();
+        }
+
+        public void pegar()
+        {
+            rtbDocumento.Paste();
+        }
+
+
+        public void colorTexto()
+        {
+            ColorDialog color = new ColorDialog();
+            if (color.ShowDialog() == DialogResult.OK)
+            {
+                rtbDocumento.ForeColor = color.Color;
+            }
+        }
+
+        public void colorFonfo()
+        {
+            ColorDialog fondo = new ColorDialog();
+            if(fondo.ShowDialog()== DialogResult.OK)
+            {
+                rtbDocumento.BackColor = fondo.Color;
+            }
+        }
+
+        public void colorFondoTexto()
+        {
+            ColorDialog fondoFuente = new ColorDialog();
+            if (fondoFuente.ShowDialog() == DialogResult.OK)
+            {
+                rtbDocumento.SelectionBackColor = fondoFuente.Color;
+                
+            }
+        }
+
+        public void formato()
+        {
+            FontDialog fuente = new FontDialog();
+
+            fuente.Font = rtbDocumento.Font;
+            if (fuente.ShowDialog() == DialogResult.OK)
+            {
+                rtbDocumento.Font = fuente.Font;
+            }
+        }
+
+
     }
 }
