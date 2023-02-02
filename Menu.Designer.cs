@@ -57,7 +57,6 @@ namespace WordDavidGuerrero
             this.cascadaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verticalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.horizontalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listaDeDocumentosAbiertosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -265,8 +264,7 @@ namespace WordDavidGuerrero
             this.ventanaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cascadaToolStripMenuItem,
             this.verticalToolStripMenuItem,
-            this.horizontalToolStripMenuItem,
-            this.listaDeDocumentosAbiertosToolStripMenuItem});
+            this.horizontalToolStripMenuItem});
             this.ventanaToolStripMenuItem.Name = "ventanaToolStripMenuItem";
             this.ventanaToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.ventanaToolStripMenuItem.Text = "Ventana";
@@ -291,13 +289,6 @@ namespace WordDavidGuerrero
             this.horizontalToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
             this.horizontalToolStripMenuItem.Text = "Horizontal";
             this.horizontalToolStripMenuItem.Click += new System.EventHandler(this.horizontalToolStripMenuItem_Click);
-            // 
-            // listaDeDocumentosAbiertosToolStripMenuItem
-            // 
-            this.listaDeDocumentosAbiertosToolStripMenuItem.Name = "listaDeDocumentosAbiertosToolStripMenuItem";
-            this.listaDeDocumentosAbiertosToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
-            this.listaDeDocumentosAbiertosToolStripMenuItem.Text = " Lista de documentos abiertos";
-            this.listaDeDocumentosAbiertosToolStripMenuItem.Click += new System.EventHandler(this.listaDeDocumentosAbiertosToolStripMenuItem_Click);
             // 
             // Menu
             // 
@@ -343,7 +334,6 @@ namespace WordDavidGuerrero
         private System.Windows.Forms.ToolStripMenuItem cascadaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verticalToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem horizontalToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem listaDeDocumentosAbiertosToolStripMenuItem;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.ToolStripMenuItem formatoTextoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem borrarTodoToolStripMenuItem;

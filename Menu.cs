@@ -146,22 +146,22 @@ namespace WordDavidGuerrero
 
         private void cascadaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.LayoutMdi(System.Windows.Forms.MdiLayout.Cascade);
+            this.LayoutMdi(MdiLayout.Cascade);
         }
 
         private void verticalToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.LayoutMdi(System.Windows.Forms.MdiLayout.TileVertical);
+            this.LayoutMdi(MdiLayout.TileVertical);
         }
 
         private void horizontalToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.LayoutMdi(System.Windows.Forms.MdiLayout.TileHorizontal);
+            this.LayoutMdi(MdiLayout.TileHorizontal);
         }
 
         private void listaDeDocumentosAbiertosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.LayoutMdi(System.Windows.Forms.MdiLayout.ArrangeIcons);
+            this.LayoutMdi(MdiLayout.ArrangeIcons);
         }
     }
 }
